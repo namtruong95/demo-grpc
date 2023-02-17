@@ -23,6 +23,10 @@ client.sayHello(request, (error, data) => {
     if (error) throw error;
 
     console.log(data.getMessage());
+});
 
-    process.exit()
+client.sayHelloAgain(request, (error, data) => {
+    if (error) throw error;
+
+    console.log(data.getMessage());
 });

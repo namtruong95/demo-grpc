@@ -39,6 +39,17 @@ var GreeterService = exports.GreeterService = {
     responseSerialize: serialize_HelloReply,
     responseDeserialize: deserialize_HelloReply,
   },
+  sayHelloAgain: {
+    path: '/Greeter/SayHelloAgain',
+    requestStream: false,
+    responseStream: false,
+    requestType: helloworld_helloworld_pb.HelloRequest,
+    responseType: helloworld_helloworld_pb.HelloReply,
+    requestSerialize: serialize_HelloRequest,
+    requestDeserialize: deserialize_HelloRequest,
+    responseSerialize: serialize_HelloReply,
+    responseDeserialize: deserialize_HelloReply,
+  },
 };
 
 exports.GreeterClient = grpc.makeGenericClientConstructor(GreeterService);

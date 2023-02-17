@@ -30,3 +30,9 @@ client.sayHello({ name }, (error, data) => {
 
     console.log(data.message);
 })
+
+client.sayHelloAgain({ name }, (error, data) => {
+    if (error) throw error;
+
+    console.log(data.message);
+})

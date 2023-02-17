@@ -39,4 +39,10 @@ func main() {
 		log.Fatalf("could not greet: %v", err)
 	}
 	log.Printf("Greeting: %s", r.GetMessage())
+
+	r1, err := c.SayHelloAgain(ctx, &pb.HelloRequest{Name: *name})
+	if err != nil {
+		log.Fatalf("could not greet: %v", err)
+	}
+	log.Printf("Greeting: again %s", r1.GetMessage())
 }

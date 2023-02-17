@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service Benchmark {
+    rpc GetAll (Empty) returns (Response);
+}
+
+message Empty {}
+
+message Item {
+    string boardId = 1;
+    repeated string boardItems = 2;
+    repeated string undoedItems = 3;
+    string viewPosition = 4;    
+    bool active = 5;
+}
+
+message Response {
+    repeated Item items = 1;
+    string currentBoardId = 2;
+}
